@@ -3,6 +3,24 @@
 <body>
 <script>
 
+// Contact form submission
+        const form = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Simple form validation
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name === '' || email === '' || message === '') {
+                formMessage.style.color = 'red';
+                formMessage.textContent = 'Please fill in all fields.';
+                return;
+            }
+
+
 function calculateGPA() {
 const grade1 = parseFloat(document.getElementById('grade1').value);
 const grade2 = parseFloat(document.getElementById('grade2').value);
