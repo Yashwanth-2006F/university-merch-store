@@ -37,6 +37,19 @@ const cartContainer = document.getElementById('cart-items');
         cartContainer.appendChild(itemDiv);
       });
 
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                if (navLinks.classList.contains('nav-active')) {
+                    navLinks.classList.remove('nav-active');
+                }
+            });
+        });
+
+
       totalDisplay.textContent = Total: ₹${total};
       actionsDiv.style.display = "flex";
     }
