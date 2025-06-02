@@ -31,14 +31,6 @@ const cartContainer = document.getElementById('cart-items');
           <small>Subtotal: ₹${item.price * item.qty}</small>
           <button class="btn btn-remove" onclick="removeItem(${index})">Remove</button>
           <button class="btn" onclick="buySingleItem(${index})">Buy Now</button>
-        `;
-
-        total += item.price * item.qty;
-        cartContainer.appendChild(itemDiv);
-      });
-
-      totalDisplay.textContent = Total: ₹${total};
-      actionsDiv.style.display = "flex";
     }
 
     function removeItem(index) {
