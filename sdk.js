@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
-<body>
-<script>
+
 
 function calculateGPA() {
 const grade1 = parseFloat(document.getElementById('grade1').value);
@@ -68,7 +65,3 @@ updateDisplay();
 };
 
 updateDisplay();
-
-</script>
-</body>
-</html>
